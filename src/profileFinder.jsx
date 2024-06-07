@@ -36,15 +36,15 @@ const ProfileFinder = () => {
                 <button className='button'>Search</button>
             </form>
             <div className='doc'>
-                <h2>UserName :{profile.login}</h2>
-                <h2>Name :{profile.name}</h2>
-                <h3>Company :{profile.company}</h3>
-                <h3>Public Repo :{profile.public_repos}</h3>
-                <h3>Followers :{profile.followers}</h3>
-                <h3>Following :{profile.following}</h3>
-                <h3>Bio :{profile.bio}</h3>
-                <h3>Location :{profile.location}</h3>
-                <h3>Created at: {profile.created_at}</h3>
+                <h3>UserName :&nbsp;<span style={{color:"purple"}}>{profile.login}</span></h3>
+                <h2>Name :&nbsp;<span style={{color:"purple"}}>{profile.name}</span></h2>
+                <h3>Company :&nbsp;<span style={{color:"purple"}}>{profile.company}</span></h3>
+                <h3>Public Repo :&nbsp;<span style={{color:"purple"}}>{profile.public_repos}</span></h3>
+                <h3>Followers :&nbsp;<span style={{color:"purple"}}>{profile.followers}</span></h3>
+                <h3>Following :&nbsp;<span style={{color:"purple"}}>{profile.following}</span></h3>
+                <h3>Bio :&nbsp;&nbsp;<span style={{color:"purple"}}>{profile.bio}</span></h3>
+                <h3>Location :&nbsp;<span style={{color:"purple"}}>{profile.location}</span></h3>
+                <h3>Created at:&nbsp; <span style={{color:"purple"}}>{profile.created_at}</span></h3>
             </div>
         </div>
     )

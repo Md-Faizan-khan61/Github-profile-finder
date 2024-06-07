@@ -29,8 +29,11 @@ code {
   border:2px solid purple ;
 }
 .doc{
-  color:#abb0f6;
+  color:gray;
   margin-top: 25px;
+  margin-left: 200px;
+  display: flex;
+  flex-direction: column;
 }
 .form{
   text-align: center;
