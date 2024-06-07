@@ -6,7 +6,7 @@ function App() {
   return (
    <>
    <div className='header'>
-   <i class="fa-brands fa-github fa-flip fa-2xl"></i>
+   <i className="fa-brands fa-github fa-flip fa-2xl"></i>
    <h2 style={{textAlign:"center",color:'purple',marginLeft:'3px'}}>Github Profile Finder</h2>
    </div>
   

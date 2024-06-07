@@ -4,6 +4,7 @@ import Axios from 'axios';
 const ProfileFinder = () => {
     const [profile, setProfile] = useState('')
     const [userName ,setUserName] = useState('')
+    const [error , setError] = useState('')
     // useEffect(() => {
     //    getProfile();
     // }, [])
@@ -14,8 +15,11 @@ const ProfileFinder = () => {
             console.log("profile");
             console.log(response.data)
             setProfile(response.data)
+            setError('')
         })
         .catch((error) => {
+            setError(<h2 className='err'>User not found</h2>)
+            setProfile('')
             console.log(error);
         })
     }
@@ -35,7 +39,8 @@ const ProfileFinder = () => {
                 />
                 <button className='button'>Search</button>
             </form>
-            <div className='doc'>
+            {error && <p>{error}</p>}
+            {profile && (<div className='doc'>
                 <h3>UserName :&nbsp;<span style={{color:"purple"}}>{profile.login}</span></h3>
                 <h2>Name :&nbsp;<span style={{color:"purple"}}>{profile.name}</span></h2>
                 <h3>Company :&nbsp;<span style={{color:"purple"}}>{profile.company}</span></h3>
@@ -46,6 +51,7 @@ const ProfileFinder = () => {
                 <h3>Location :&nbsp;<span style={{color:"purple"}}>{profile.location}</span></h3>
                 <h3>Created at:&nbsp; <span style={{color:"purple"}}>{profile.created_at}</span></h3>
             </div>
+            )}
         </div>
     )
 }
