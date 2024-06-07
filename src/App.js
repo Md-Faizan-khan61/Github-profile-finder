@@ -1,25 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import ProfileFinder from './profileFinder';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   <>
+   <div className='header'>
+   <i class="fa-brands fa-github fa-flip fa-2xl"></i>
+   <h2 style={{textAlign:"center",color:'purple',marginLeft:'3px'}}>Github Profile Finder</h2>
+   </div>
+  
+   <ProfileFinder />
+   </>
+  )
 }
 
 export default App;
